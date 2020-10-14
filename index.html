@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+	<title>sticky Navbar!!!!!</title> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><!--BS4-->
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="all.css"> 
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.common.dev.js'></script> 
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.common.js'></script> 
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js'></script>
+</head>
+<style>
+	body{
+		padding-bottom:2000px;
+		background:green;
+	}
+	header{
+		width:100%;
+		height:100px;
+		background:transparent;
+		color:white;
+		position:fixed;
+		top:0;
+		left:0;
+		display:flex;
+		justify-content:center;
+		transition:.5s ease;
+	}
+	header.sticky{
+		background:red;
+		height:50px;
+	}
+</style>
+<body>
+	<header>
+		header
+	</header>
+
+	<script type="text/javascript">
+		window.addEventListener("scroll",function(){
+			var header = document.querySelector("header");
+			header.classList.toggle("sticky", window.scrollY>0);
+		})
+
+	</script>	
+</body>
+</html>
